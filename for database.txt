@@ -1,1 +1,10 @@
-fdsfasdfdfasfsadf
+this is for orders table
+
+CREATE TABLE orders (
+  order_id SERIAL PRIMARY KEY,
+  customer_id INTEGER NOT NULL,
+  order_date DATE NOT NULL,
+  total_amount SMALLINT NOT NULL,
+  shipping_address VARCHAR(255) NOT NULL,
+  order_status VARCHAR(255) NOT NULL
+);
