@@ -8,3 +8,18 @@ CREATE TABLE orders (
   shipping_address VARCHAR(255) NOT NULL,
   order_status VARCHAR(255) NOT NULL
 );
+
+
+this is for customersrevies table 
+CREATE TABLE customerreviews (
+  review_id SERIAL PRIMARY KEY,
+  product_id INTEGER NOT NULL,
+  customer_id INTEGER NOT NULL,
+  rating SMALLINT NOT NULL,
+  review_text TEXT,
+  review_date DATE NOT
+ 
+NULL,
+  FOREIGN KEY (product_id) REFERENCES products(product_id),
+  FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+);
