@@ -23,3 +23,15 @@ NULL,
   FOREIGN KEY (product_id) REFERENCES products(product_id),
   FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
 );
+
+
+this is for products table 
+CREATE TABLE products (
+  product_id SERIAL PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  description VARCHAR(200) NULL,
+  price SMALLINT NOT NULL,
+  category_id INTEGER REFERENCES categories(category_id),
+  stockquantity INTEGER NOT NULL,
+  supplier_id INTEGER REFERENCES suppliers(supplier_id)
+);
